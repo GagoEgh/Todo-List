@@ -1,0 +1,18 @@
+<div class="header">
+    <p>Angular Homevworks</p>
+    <div class="nav">
+        <ul>   
+            <li>
+                <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+            </li>
+            <li>
+                <a routerLink="/users"routerLinkActive="active">Users</a>
+            </li>
+            <li>
+                <a routerLink="/list"routerLinkActive="active">Todo List</a>
+            </li>
+        </ul>
+    </div>  
+</div>
+
+<router-outlet></router-outlet>

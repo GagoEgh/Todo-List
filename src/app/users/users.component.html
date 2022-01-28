@@ -1,0 +1,19 @@
+<div class="title">
+    <h1>{{title}}</h1>
+</div>
+
+<div class="content">
+    <ul>
+        <li *ngFor = "let item of appService.users,let i = index" (click)=showList(item)>
+            <p>{{item.id}}-{{item.name}},Total todo items:{{item.list.length}}</p>
+            <ul *ngIf = "item.isShow" class="sabUl">
+                <h2 class="title">Todo List</h2>
+                <p *ngIf = 'item.list.length === 0' class="title" >No items</p>
+                <li *ngFor = 'let list of item.list'>
+                    <p>{{list.id}} {{list.title}}</p>
+                </li>  
+            </ul>
+        </li>
+    </ul>
+
+</div>

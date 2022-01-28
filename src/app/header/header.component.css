@@ -1,0 +1,18 @@
+.header,.nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav ul{
+    width: 300px;
+}
+
+.nav a{
+    
+    text-decoration: none;
+}
+
+.active{
+    padding: 4px;
+    background-color: #3d72fb;
+}

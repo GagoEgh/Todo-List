@@ -1,0 +1,10 @@
+.content, .sabUl{
+    border: 1px solid rgb(199, 190, 190);
+}
+
+.sabUl{
+    padding-bottom: 10px;
+}
+.content li{
+    border-bottom: 1px solid  rgb(199, 190, 190);
+}
