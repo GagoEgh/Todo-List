@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServiceService } from '../app-service.service';
-import { List, User } from '../app.interface';
+import { MyList } from '../models/myList';
+import { Todo } from '../models/todo';
+import { User } from '../models/user.model';
+
 
 
 @Component({
@@ -12,16 +15,10 @@ export class UsersComponent implements OnInit {
   title = "Users";
 
   constructor(
-    public appService:AppServiceService
+    public appService: AppServiceService,
   ) { }
 
-  ngOnInit(): void {
-   this.appService.createUsers();
-  }
+  ngOnInit(): void {}
 
-  public showList(item:User){
-    item.isShow = !item.isShow;
-  }
 
-  
 }

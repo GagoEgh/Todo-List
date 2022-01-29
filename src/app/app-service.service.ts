@@ -1,39 +1,37 @@
 import { Injectable } from '@angular/core';
-import { List, User } from './app.interface';
+import { MyList } from './models/myList';
+import { Todo } from './models/todo';
+import { User } from './models/user.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppServiceService {
-  private list: List[] = [];
-  users: User[] = [];
-  todo:List [] = [];
+  users = new MyList<User>([
+    {
+      id: 1,
+      name: 'User 1',
+      isActive:false,
+      todoList: new MyList<Todo>([
+        { id: 1, title: 'Todo item 1' },
+        { id: 2, title: 'Todo item 2' },
+      ]),
+    },
+    {
+      id: 2,
+      name: 'User 2',
+      isActive:false,
+      todoList: new MyList<Todo>(),
+    },
+    {
+      id: 3,
+      name: 'User 3',
+      isActive:false,
+      todoList: new MyList<Todo>([{ id: 3, title: 'Todo item 3' }]),
+    },
+  ]);
   constructor() {
-    this.createList(this.todo)
-   }
 
-  public createUsers(): void {
-    this.createList(this.list,'item');
-    if (this.list.length === 0 || this.users.length === 0) {
-      for (let i = 1; i < 7; i++) {
-        this.users?.push({
-          id: i,
-          name: `User ${i}`,
-          isShow: false,
-          list: this.list
-        })
-      }
-    }
-  }
-
-  private createList(list:List[],str?:string): void {
-    if (list.length === 0) {
-      for (let i = 1; i < 7; i++) {
-        list.push({
-          id: i,
-          title: `Todo ${str} ${i}`
-        })
-      }
-    }
   }
 }

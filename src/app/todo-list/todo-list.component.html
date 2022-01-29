@@ -4,8 +4,8 @@
 
 <div class="content">
     <ul>
-        <li *ngFor = "let item of appService.todo,let i = index" >
-            <p>{{item.id}}- Todo {{item.id}}</p>   
+        <li *ngFor = 'let list of todos.values'>
+            {{list?.id}}-{{list?.title}}
         </li>
     </ul>
 
