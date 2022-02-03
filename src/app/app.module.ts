@@ -7,8 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { HeaderComponent } from './header/header.component';
-import { UserListComponent } from './users/user-list/user-list.component';
-import { UserListCardComponent } from './users/user-list/user-list-card/user-list-card.component';
+
+import { UserTodosComponent } from './users/user-card/user-todos/user-todos.component';
+import { UserCardComponent } from './users/user-card/user-card.component';
+import { BackgroundColorDirective } from './background-color.directive';
+import { SetTimeDirective } from './set-time.directive';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,10 @@ import { UserListCardComponent } from './users/user-list/user-list-card/user-lis
     UsersComponent,
     TodoListComponent,
     HeaderComponent,
-    UserListComponent,
-    UserListCardComponent
+    UserCardComponent,
+    UserTodosComponent,
+    BackgroundColorDirective,
+    SetTimeDirective
   ],
   imports: [
     BrowserModule,

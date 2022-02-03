@@ -6,8 +6,8 @@
     <div *ngIf='this.user!.isActive '>
         <h4 class="title">Todo List</h4>
         <p *ngIf = "!user?.todoList?.values?.length">No items</p>
-        <app-user-list-card *ngFor = 'let card of user?.todoList?.values'[card]="card" >
-        </app-user-list-card>
+        <app-user-todos  *ngFor = 'let card of user?.todoList?.values'[card]="card" >
+        </app-user-todos>
     </div>
  
 </div>

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServiceService } from '../app-service.service';
-import { MyList } from '../models/myList';
-import { Todo } from '../models/todo';
-import { User } from '../models/user.model';
 
 
 

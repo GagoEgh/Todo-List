@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppServiceService } from '../app-service.service';
 import { MyList } from '../models/myList';
 import { Todo } from '../models/todo';
 
@@ -30,8 +29,7 @@ export class TodoListComponent implements OnInit {
 
   ) { }
 
-  ngOnInit(): void {
-    console.log(this.todos)
-  }
+  ngOnInit(): void {}
+  
 
 }
