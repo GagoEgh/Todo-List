@@ -1,0 +1,33 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" 
+color = "#fff" type = "sline-spin-fade" [fullScreen] = "true">
+    <p style="color: white" > Loading... </p>
+</ngx-spinner>
+     <form class="form" [formGroup]='loginForm' (ngSubmit)="onSubmit()">
+        <h1>Login</h1>
+        <input class="input" type="email" placeholder="Email" formControlName = 'email'>
+        <div>
+            <p class="red"
+            *ngIf = "loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">
+                 required
+            </p>
+            <p class="red"
+            *ngIf = "loginForm.get('email')?.hasError('email')">
+                no valid
+            </p>
+         </div>
+        <input class="input" type="password" placeholder="Password" formControlName = 'password'>
+        <div>
+            <p class="red"
+            *ngIf = "loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                 required
+            </p>
+            <p class="red"
+            *ngIf = "loginForm.get('password')?.hasError('minlength')">
+                no valid
+            </p>
+        </div>
+        <button class="buttonInput" type="submit">Login</button>
+        <a routerLink ='/register' class="rout">Register</a>
+        <p *ngIf="noData" class="red">There is no such person</p>
+    </form>
+

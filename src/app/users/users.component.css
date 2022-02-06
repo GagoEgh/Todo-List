@@ -1,0 +1,19 @@
+.conteiner{
+ margin: 30px;
+}
+
+.userCard{
+    margin-top: 50px;
+}
+
+.text{
+    border: 1px solid rgb(199, 190, 190);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.text:hover{
+    
+    background-color: rgb(196, 189, 189);
+
+}

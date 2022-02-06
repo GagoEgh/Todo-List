@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AppServiceService } from 'src/app/app-service.service';
 import { User } from 'src/app/models/user.model';
 
 
@@ -11,14 +12,14 @@ import { User } from 'src/app/models/user.model';
 export class UserCardComponent implements OnInit {
 
   @Input()
-  user: User| null = null;
+  user: User = {} as User;
+  @Input()
+  search: string = '';
+  constructor(public appService:AppServiceService) { }
+  ngOnInit(): void { }
 
-  constructor() { }
-
-  ngOnInit(): void {}
-
-  public showList(user:any):void{
-    this.user!.isActive = !this.user!.isActive ;
+  public showList(user: any): void {
+    this.user!.isActive = !this.user!.isActive;
   }
 
 }

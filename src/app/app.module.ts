@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +11,22 @@ import { HeaderComponent } from './header/header.component';
 
 import { UserTodosComponent } from './users/user-card/user-todos/user-todos.component';
 import { UserCardComponent } from './users/user-card/user-card.component';
-import { BackgroundColorDirective } from './background-color.directive';
-import { SetTimeDirective } from './set-time.directive';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NgxSpinnerModule } from "ngx-spinner";
+import { MyFilterPipe } from './my-filter.pipe';
+
+registerLocaleData(en);
+
+
 
 @NgModule({
   declarations: [
@@ -22,14 +37,21 @@ import { SetTimeDirective } from './set-time.directive';
     HeaderComponent,
     UserCardComponent,
     UserTodosComponent,
-    BackgroundColorDirective,
-    SetTimeDirective
+    LoginComponent,
+    RegisterComponent,
+    MyFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    NgxSpinnerModule
   ],
-  providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

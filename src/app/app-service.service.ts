@@ -11,7 +11,10 @@ export class AppServiceService {
   users = new MyList<User>([
     {
       id: 1,
-      name: 'User 1',
+      password:'User 1',
+      email:'us1@sd.sd',
+      firstName :'us1',
+      lastName:'User 1',
       isActive:false,
       todoList: new MyList<Todo>([
         { id: 1, title: 'Todo item 1' },
@@ -20,13 +23,19 @@ export class AppServiceService {
     },
     {
       id: 2,
-      name: 'User 2',
+      email:'us2@sd.sd',
+      password:'User 2',
+      firstName :'us2',
+      lastName:'User 2',
       isActive:false,
       todoList: new MyList<Todo>(),
     },
     {
       id: 3,
-      name: 'User 3',
+      email:'us3@sd.sd',
+      password:'User 3',
+      firstName :'us3',
+      lastName:'User 3',
       isActive:false,
       todoList: new MyList<Todo>([{ id: 3, title: 'Todo item 3' }]),
     },

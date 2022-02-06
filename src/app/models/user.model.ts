@@ -6,9 +6,12 @@ import { Todo } from "./todo";
 export class User implements IWithIdentity {
     constructor(
       public id: number,
-      public name: string,
+      public password: string,
+      public email:string,
+      public  firstName :string,
+      public lastName:string,
       public isActive:boolean,
-      public todoList: MyList<Todo>
+      public todoList?: MyList<Todo>
     ) {}
     
 }

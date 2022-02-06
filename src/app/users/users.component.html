@@ -1,7 +1,11 @@
-<div class="title">
-    <h1>{{title}}</h1>
-</div>
+<div class="conteiner">
+    <div class="title">
+        <h1>{{title}}</h1>
+    </div>
 
-<div>
-    <app-user-card *ngFor = "let user of appService.users.values" [user] = "user"></app-user-card>       
+    <input type="search" placeholder="Serch Users" class="input"(input)="onChenge($event)">
+    
+    <div class="userCard">
+        <app-user-card *ngFor = "let user of appService.users.values" [user] = "user" [search] ='search'></app-user-card>       
+    </div>
 </div>

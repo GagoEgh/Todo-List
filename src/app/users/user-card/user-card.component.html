@@ -1,13 +1,11 @@
+<div   (click) = "showList(user)">
+    <p>{{user | myFilter:search}}</p> 
 
-<div class="text"  (click) = "showList(user)">
-    <p>
-        {{user?.id}}-{{user?.name}} Total todo items:{{user?.todoList?.values?.length}}
-    </p>
     <div *ngIf='this.user!.isActive '>
         <h4 class="title">Todo List</h4>
         <p *ngIf = "!user?.todoList?.values?.length">No items</p>
-        <app-user-todos  *ngFor = 'let card of user?.todoList?.values'[card]="card" >
-        </app-user-todos>
+        <app-user-todos  *ngFor = 'let card of user?.todoList?.values'
+        [card]="card" ></app-user-todos>  
     </div>
- 
 </div>
+

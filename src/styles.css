@@ -1,3 +1,37 @@
+.form{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    box-shadow: 2px 3px 20px 2px #acb1b7;
+    padding: 30px;
+}
+
+.input, .buttonInput{
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input{
+    background-color: rgb(243 239 239 / 76%);
+}
+
+.buttonInput{
+    width: 100px;
+    margin: 0 auto;
+    background-color: #a2b7ed;
+    cursor: pointer;
+}
+
+.rout{
+    text-decoration: none;
+    color: gray;
+    margin: 0 auto;
+    margin-top: 10px;
+} 
 
 .title{
     text-align: center;
@@ -5,4 +39,9 @@
 
 ul{
     list-style: none;
+}
+
+.red{
+    color: red;
+    text-align: center;
 }

@@ -10,12 +10,15 @@ import { AppServiceService } from '../app-service.service';
 })
 export class UsersComponent implements OnInit {
   title = "Users";
-
+  search:string = '';
   constructor(
     public appService: AppServiceService,
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
+  public onChenge(event:any) {
+    this.search = event.target.value;
+  }
 
 }
